@@ -8,7 +8,9 @@ class LaravelNuxtServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/../config/nuxt.php' => $this->app->make('path.config').DIRECTORY_SEPARATOR.'nuxt.php',
+        ], 'config');
     }
 
     public function register()
