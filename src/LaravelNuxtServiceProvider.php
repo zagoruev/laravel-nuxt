@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallares\LaravelNuxt;
+namespace Zagoruev\LaravelNuxt;
 
 use Illuminate\Support\ServiceProvider;
 

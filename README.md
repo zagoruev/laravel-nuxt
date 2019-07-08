@@ -15,7 +15,7 @@ return [
   // ...
   'providers' => [
       // ...
-      Pallares\LaravelNuxt\LaravelNuxtServiceProvider::class,
+      Zagoruev\LaravelNuxt\LaravelNuxtServiceProvider::class,
   ],
 ];
 ```
@@ -27,6 +27,11 @@ You need to add a fallback route that will render the SPA page in `routes/web.ph
 // Add this route the last, so it doesn't interfere with your other routes.
 Route::get(
     '{uri}',
-    '\\'.Pallares\LaravelNuxt\Controllers\NuxtController::class
+    '\\'.Zagoruev\LaravelNuxt\Controllers\NuxtController::class
 )->where('uri', '.*');
+```
+
+If you want to change Nuxt build location feel free to publish config and edit it:
+```bash
+php artisan vendor:publish --provider="Zagoruev\Lighthouse\LighthouseServiceProvider" --tag=config
 ```
