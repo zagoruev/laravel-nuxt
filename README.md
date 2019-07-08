@@ -30,5 +30,3 @@ Route::get(
     '\\'.Pallares\LaravelNuxt\Controllers\NuxtController::class
 )->where('uri', '.*');
 ```
-
-Finally, you must install the [laravel-nuxt](https://github.com/skyrpex/laravel-nuxt-js) npm package. After following the instructions, run `npm run build` and try your SPA!
